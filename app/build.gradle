@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.demo.ken.listing_revamp"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile rootProject.ext.supportV7
+    compile rootProject.ext.supportDesign
+    compile rootProject.ext.supportRecycler
+    compile rootProject.ext.supportAnnotations
+    compile rootProject.ext.supportCardView
+    compile rootProject.ext.rxjava
+    compile rootProject.ext.rxandroid
+    compile rootProject.ext.retrofit
+    compile rootProject.ext.adapterrx
+    compile rootProject.ext.gson
+
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+
+}

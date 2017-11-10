@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/item_index"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+    <com.demo.ken.listing_revamp.view.RoundedCornerLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:cornerRadiusDp="40"
+        >
+        <ImageView
+            android:id="@+id/item_icon"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.demo.ken.listing_revamp.view.RoundedCornerLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/label"
+            />
+        <TextView
+            android:textSize="12sp"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:id="@+id/category"
+            />
+        <LinearLayout
+            android:layout_marginTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center_vertical">
+
+            <RatingBar
+                style="?android:attr/ratingBarStyleSmall"
+                android:theme="@style/RatingBar"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:id="@+id/rate_bar">
+
+            </RatingBar>
+            <TextView
+                android:id="@+id/rate_count"
+                android:textSize="10sp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

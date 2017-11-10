@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <com.demo.ken.listing_revamp.view.RoundedCornerLayout
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:cornerRadiusDp="10">
+
+        <ImageView
+            android:background="@android:color/darker_gray"
+            android:id="@+id/icon"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.demo.ken.listing_revamp.view.RoundedCornerLayout>
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:ellipsize="end"
+        android:layout_marginTop="6dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>
