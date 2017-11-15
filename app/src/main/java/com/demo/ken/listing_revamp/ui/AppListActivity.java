@@ -16,11 +16,11 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.demo.ken.listing_revamp.R;
 import com.demo.ken.listing_revamp.mvp.AppListPresenter;
 import com.demo.ken.listing_revamp.mvp.AppListView;
-import com.demo.ken.listing_revamp.view.DividerItemDecoration;
-import com.demo.ken.listing_revamp.R;
 import com.demo.ken.listing_revamp.mvp.model.TopAppPojo;
+import com.demo.ken.listing_revamp.view.DividerItemDecoration;
 
 import java.util.List;
 
