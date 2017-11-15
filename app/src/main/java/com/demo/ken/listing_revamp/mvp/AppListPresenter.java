@@ -56,7 +56,7 @@ public class AppListPresenter {
         fetchFromServer();
     }
 
-    public void fetchFromServer(){
+    public void fetchFromServer() {
         sub(true
                 , Observable.zip(
                         retrofit.create(ApiService.class).getTopList(100),
@@ -136,7 +136,6 @@ public class AppListPresenter {
 
         sub(false
                 , Observable.from(queryList).flatMap(entry -> {
-                    Log.w("[ken]3", entry.toString());
                     return retrofit.create(ApiService.class).getDetail(entry.id.attributes.imId);
                 }).toList()
                 , new Observer<List<AppDetail>>() {
@@ -191,7 +190,7 @@ public class AppListPresenter {
         onFetch(currentPage);
     }
 
-    private boolean isContainKeyword(TopAppPojo.Feed.Entry entry,String keyword){
+    private boolean isContainKeyword(TopAppPojo.Feed.Entry entry, String keyword) {
         return entry.imName.label.contains(keyword) ||
                 entry.category.attributes.label.contains(keyword) ||
                 entry.imArtist.label.contains(keyword) ||
